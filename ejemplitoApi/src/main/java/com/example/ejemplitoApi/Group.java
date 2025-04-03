@@ -1,6 +1,20 @@
 package com.example.ejemplitoApi;
 
+import jakarta.persistence.*;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+
+import javax.naming.Name;
+
+@Entity
+@Table(name="groups")
+
+
 public class Group {
+
+    @Id
+    @GenerateValue8s(Stra = GenerationType.IDENTITY)
+    @Column(Name = "id_curso")
     private Integer idGroup;
     private String name;
 

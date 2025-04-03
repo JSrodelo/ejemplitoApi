@@ -1,11 +1,21 @@
 package com.example.ejemplitoApi;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonMerge;
+
 import java.util.Date;
+import java.util.List;
+
 
 public class Teacher {
 
     private Integer idTeacher;
     private Date speciality;
+
+    @oneToMany
+    @JsonManagedReference
+    private list<Group> grupos;
+
 
     public Teacher() {
     }
